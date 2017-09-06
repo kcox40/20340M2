@@ -37,7 +37,7 @@ public class Person1 {
 		for (int i = 0; i < charArray.length - 2; i++) {
 			charArray[i] = charArray[i++];
 		}
-	  //Person 1 put your implementation here
+	  //Person 1 put your implementation here HELLLER
 	  return null;
 	}
 
