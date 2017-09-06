@@ -31,6 +31,7 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
+		Char[] charArray = input.toCharArray();
 	  //Person 1 put your implementation here
 	  return null;
 	}
