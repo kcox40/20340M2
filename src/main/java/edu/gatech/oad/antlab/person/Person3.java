@@ -46,6 +46,7 @@ public class Person3 {
 	  String output = "";
 	  while (i >= 0) {
 	  	output += input.charAt(i);
+	  	i--;
 	  }
 	  return output;
 	}
