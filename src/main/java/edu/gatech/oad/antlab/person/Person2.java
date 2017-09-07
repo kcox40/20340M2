@@ -1,7 +1,7 @@
 package edu.gatech.oad.antlab.person;
 
 /**
- * THIS IS A TEST!
+ * Changed comments
  *  A simple class for person 2
  *  returns their name and a
  *  modified string 
@@ -31,7 +31,10 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
+	  //put characters into an array
+	  //take indices and scramble them randomly
+	  //put letters back at scrambled indices
+	  //return
 	  return null;
 	}
 	/**
