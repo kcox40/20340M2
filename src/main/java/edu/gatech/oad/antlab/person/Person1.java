@@ -31,14 +31,21 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-		char[] charArray = input.toCharArray();
-		char first = charArray[0];
-		char second = charArray[1];
-		for (int i = 0; i < charArray.length - 2; i++) {
-			charArray[i] = charArray[i++];
-		}
-	  //Person 1 put your implementation here HELLLER jhsfowurghwrghworghjoe
-	  return null;
+        char[] charArray = input.toCharArray();
+        char[] temp = new char[charArray.length];
+        char first = charArray[0];
+        char second = charArray[1];
+        for (int i = 0; i < charArray.length - 2; i++) {
+            temp[i] = charArray[i + 2];
+        }
+        temp[temp.length - 2] = first;
+        temp[temp.length - 1] = second;
+      //Person 1 put your implementation here HELLLER jhsfowurghwrghworghjoe
+        String reorder = "";
+        for (char c : temp) {
+            reorder += c;
+        }
+      return reorder;
 	}
 
 	/**
