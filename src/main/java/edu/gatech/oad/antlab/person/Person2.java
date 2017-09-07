@@ -34,7 +34,7 @@ public class Person2 {
 	  //put characters into an array
 	  //take indices and scramble them randomly
 	  //put letters back at scrambled indices
-	  //return
+	  //return something
 	  return null;
 	}
 	/**
