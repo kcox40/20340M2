@@ -1,5 +1,8 @@
 package edu.gatech.oad.antlab.person;
 
+import java.util.List;
+import java.util.ArrayList;
+
 /**
  * Changed comments
  *  A simple class for person 2
@@ -31,11 +34,20 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //put characters into an array
-	  //take indices and scramble them randomly
-	  //put letters back at scrambled indices
-	  //return something
-	  return "word";
+	  List letters = new ArrayList();
+
+	  char[] lettersArray = input.toCharArray();
+
+	  for (int i = 0; i < input.length(); i++) {
+	  	letters.add(lettersArray[i]);
+	  }
+
+	  StringBuilder output = new StringBuilder(input.length());
+      while(letters.size()!=0){
+            int randPicker = (int)(Math.random()*letters.size());
+            output.append(letters.remove(randPicker));
+      }
+	  return output.toString();
 	}
 	/**
 	 * Return a string rep of this object
