@@ -35,7 +35,7 @@ public class Person2 {
 	  //take indices and scramble them randomly
 	  //put letters back at scrambled indices
 	  //return something
-	  return null;
+	  return "word";
 	}
 	/**
 	 * Return a string rep of this object
