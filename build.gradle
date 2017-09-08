@@ -1,5 +1,5 @@
 //Set a default task, so if you don't provide any, these will be executed.
-defaultTasks   'task1', 'task2'
+defaultTasks   'defaultMessage', 'build'
 
 //Import a bunch of Java related tasks to help you
 //By default production code should be in src/main/java
@@ -15,30 +15,17 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 //Define a simple task ourselves
-task hello {
+task defaultMessage {
     doLast {
-        println 'Hello World'
+        println 'NO TASK WAS SELECTED. DEFAULT TASK "BUILD" WAS AUTO-RAN.'
     }
 }
 
-// //Define a simple task that depends on another task
-task intro(dependsOn: hello) << {
-   println 'I am gradle'
-}
 
-task runp1(dependsOn:build)<< {
-   mainClassName = "PersonScramble"
-}
-// //Define a task
-task task1 << {
-     String aString = "SomE DiFFerEnt CAse ChARs"
-     println "Original String: " + aString
-     println "All Upper: " + aString.toUpperCase()
-}
-
-// //Define another task
-task task2 << {
-    println 'Task 2'
+task runp1(dependsOn:build) {
+    doLast {
+   mainClassName = "AntLabMain"
+    }
 }
 
 //set up some variables
@@ -55,20 +42,8 @@ jar  {
                  'Class-Path' : '../../lib/resources.jar'
 
     }
-
-   // destinationDir = file(".")
-   // archiveName = 'hello.jar'
 }
 
 dependencies {
-    // compile group: 'org.hibernate', name: 'hibernate-core', version: '3.6.7.Final'
-      testCompile group: 'junit', name: 'junit', version: '4.+'
-      compile fileTree(dir: 'lib', include: ['*.jar'])}
-
-//setup a location for repositories of any libraries that need to be downloaded
-repositories {
-   // mavenCentral()
-   flatDir {
-    dirs 'libs'
-   }
-}
+      compile fileTree(dir: 'lib', include: ['*.jar'])
+  }
