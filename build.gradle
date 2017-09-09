@@ -1,5 +1,5 @@
 //Set a default task, so if you don't provide any, these will be executed.
-defaultTasks   'defaultMessage', 'build'
+defaultTasks   'jar'
 
 //Import a bunch of Java related tasks to help you
 //By default production code should be in src/main/java
